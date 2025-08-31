@@ -35,6 +35,15 @@ $docker push somkiat/nodejs-api:1.0
 
 ## 5. Deploy with Kubernetes
 * Working with minikube
+* Azure Kubernetes Service
+
+Check your context
+```
+$kubectl config get-contexts
+$kubectl config use minikube
+```
+
+Deploy
 ```
 $cd k8s
 $kubectl get node
@@ -55,4 +64,12 @@ Access to service
 * https://minikube.sigs.k8s.io/docs/handbook/accessing/
 ```
 $minikube service nodejs-api-service --url
+```
+
+## 6. Deploy in AKS (Azure Kubernetes Service)
+```
+$kubectl get node
+
+$kubectl apply -f api_deployment.yml
+$kubectl apply -f api_service_lb.yml
 ```
