@@ -3,6 +3,7 @@
 
 ## 1. Run test with coverage
 ```
+$npm install
 $npm test
 ```
 
@@ -13,4 +14,10 @@ Open coverage report in folder `coverage/`
 ```
 $docker image build -t nodejs-api:1.0 .
 $docker container run -d -p 3000:3000 nodejs-api:1.0
+```
+
+## 3. API testing with Postman and newman
+```
+$cd postman
+$newman run node-api.postman_collection.json
 ```
